@@ -1,0 +1,129 @@
+.main__project {
+    min-height: 100vh;
+
+    &--title {
+        font-size: 3.5vw;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    &--cards {
+        margin: 0 auto;
+        margin-bottom: 50px;
+        max-width: 1170px;
+        padding: 0 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // align-items: center;
+        // border: 1px solid red;
+    }
+
+    &--card {
+        position: relative;
+        width: 32.333%;
+        // border: 1px solid #fff;
+        border-radius: 5px;
+        text-align: center;
+        margin: 20px 5px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        overflow: hidden;
+
+        // &:hover,
+        // &:focus {
+        //     background: #000;
+        // }
+    }
+
+    &--card img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+
+    // .card-text {
+    //     margin-top: 25px;
+    //     margin-bottom: 25px;
+    //     font-size: 1.5rem;
+    //     font-weight: 600;
+    //     padding: 0px 5px;
+    // }
+
+
+// overlay hover card
+
+.main__project--card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .5s ease;
+    opacity: 0;
+    inset: 0;
+    transform: scale(0);
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main__project--card-body {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+
+    & a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'CaviarDreamsItalic';
+        display: block;
+        border: 1px solid #ffffff;
+        padding: 5px 10px;
+    }
+}
+
+.main__project--card:hover .main__project--card-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media screen and (max-width: 1160px) {
+    .main__project--cards {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__project .card-text  {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 564px) {
+    .main__project--card {
+        width: 100%;
+    }
+
+    .main__project--title {
+        font-size: 42px;
+    }
+
+    .main__project .card-text  {
+        font-size: 0.925rem;
+    }
+
+}
+
+}
